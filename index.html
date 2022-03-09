@@ -17,8 +17,7 @@ body, html {
 
 .bg {
   /* The image used */
-  background-image: url("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
-
+  background-image: url(Milos.jpg);
   /* Full height */
   height: 100%; 
 
@@ -28,15 +27,32 @@ body, html {
   background-size: cover;
 }
 
-.working {
-  background-image: url(photo-web.jpg);
-  /* Full height */
-  height: 100%; 
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid black;
+  margin: 0px 25px 25px 25px;
+  width: 90%;
+}
+
+.button2 {
+  background-color: #f1f1f1; 
+  color: black; 
+  border: 2px solid black;
+  margin: 0px;
+  width: 100%;
 }
 
 .img {
@@ -176,6 +192,12 @@ span.lighter {
   height: 70px;
 }
 
+.container2 {
+  position: relative;
+  margin: 0px 0px;
+  height: 10px;
+}
+
 .rectangle {
     position: absolute; 
     height: 50px;
@@ -194,6 +216,15 @@ span.lighter {
     top: 20px;
 }
 
+.rectangle3 {
+    position: absolute; 
+    height: 50px;
+    width: 75%;
+    background-color: yellow;
+    right: 0;
+    top: -40px;
+}
+
 .text-block {
     position: absolute;
     margin: 32px 25px;
@@ -201,6 +232,12 @@ span.lighter {
 
 .text {
   margin: 40px 25px;
+}
+
+.text2 {
+  margin: 0px 30px;
+  background-color: #f1f1f1;
+  padding: 30px;
 }
 
 .competences {
@@ -267,6 +304,7 @@ footer {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus felis velit, sed pharetra metus bibendum sed. In mattis at purus non posuere. Pellentesque eget volutpat nibh. Suspendisse congue eleifend leo a tempus. Sed nec leo nunc. Sed dapibus nunc ac ullamcorper convallis. Integer pellentesque purus et tempor efficitur. Proin id turpis a enim vestibulum fermentum pharetra ac quam. Integer consectetur neque quam, nec tincidunt elit efficitur in. Fusce cursus vulputate sem a semper. Pellentesque ante metus, semper ac urna sed, scelerisque sagittis dui. Aenean et lacus nec mi sodales accumsan ut non ligula. Pellentesque quis facilisis augue, in cursus sapien. In interdum erat nec nulla mattis eleifend. 
           </p>
         </div>
+        <button class="button button1">More about <span class="yellow">psychosynthesis</span></button>
     </div>
 
     <!-- I can help you with -->
@@ -295,7 +333,42 @@ footer {
     </div>
 
     <!-- Image 2 -->
-    <img src="photo-web.jpg" width="100%">
+    <img src="photo-web.jpg" style="filter: grayscale(100%);" width="100%"> <!-- https://unsplash.com/photos/rRWiVQzLm7k -->
+
+    <!-- What I do-->
+      <div class="doing">
+          <div class="container2">
+              <div class="rectangle3"></div>
+          </div>
+          
+          <div class="text2">
+            <h3>I <b>offer</b> you a safe, non-judgemental and confidential space where you can be <span class="yellow">seen</span> and <span class="yellow">understood</span>. </h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus felis velit, sed pharetra metus bibendum sed. 
+                In mattis at purus non posuere. Pellentesque eget volutpat nibh. Suspendisse congue eleifend leo a tempus. Sed nec leo nunc. 
+                Sed dapibus nunc ac ullamcorper convallis. 
+            </p>
+            <button class="button button2">Start working with me</button>
+          </div>
+        </div>
+  
+
+    <!-- Testemonials & collaborations -->
+    <div class="tandc">
+      <div class="container">
+          <div class="rectangle"></div>
+          <div class="text-block">
+              <h2>Testemonials & <b>collaborations</b></h2>
+          </div>
+      </div>
+
+      <div class="text3">
+        <p>
+            Working with Miloš... <br/> Mark
+        </p>
+        <p>I colaborate with Institute of Psychosynthesis London, European Association of Psychosynthesis, UKCP, Legacy17, Slovenian Scout Organization.</p>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer>
