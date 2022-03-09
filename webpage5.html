@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.working {
+  background-image: url(photo-web.jpg);
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img {
+  position: absolute;
+  clip: rect(0px,300px,300px,0px);
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  padding: 0px;
+  top: 5px;
+  right: 20px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.topnav {
+  overflow: hidden;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: black;
+  padding: 14px 16px 14px 0px;
+  text-decoration: none;
+  display: block;
+}
+
+.topnav a.icon {
+  background: #f9f9f9;
+  font-size: 30px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.navplaceholder {
+    height: 30px;
+}
+
+.iAm {
+    margin: 25px;
+}
+
+h3 {
+    margin: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+h5 {
+    margin: 0px 10px 0px 10px;
+    font-weight: lighter;
+}
+
+span.yellow {
+    background-color: yellow;
+}
+
+span.black {
+  background-color: black;
+  color: white;
+  padding: 0px 4px;
+}
+
+span.gray {
+  background-color: lightgray;
+  padding: 0px 4px;
+}
+
+span.white {
+  padding: 0px 4px;
+}
+
+span.lighter {
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.callToAction {
+  text-align: left;
+  margin: 50px 25px;
+}
+
+.thisIsMe {
+    background-color: white;
+}
+
+.container {
+  position: relative;
+  margin: 20px 0px;
+  height: 70px;
+}
+
+.rectangle {
+    position: absolute; 
+    height: 50px;
+    width: 35%;
+    background-color: yellow;
+    left: 0;
+    top: 20px;
+}
+
+.rectangle2 {
+    position: absolute; 
+    height: 50px;
+    width: 60%;
+    background-color: yellow;
+    left: 0;
+    top: 20px;
+}
+
+.text-block {
+    position: absolute;
+    margin: 32px 25px;
+}
+
+.text {
+  margin: 40px 25px;
+}
+
+.competences {
+  margin: 25px;
+  line-height: 2;
+  font-size: large;
+}
+
+footer {
+  font-size: x-small;
+  padding: 30px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+    <!-- Navigation menu content -->
+    <!-- https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp -->
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <a href="#home">
+            <div class="navplaceholder"></div>
+        </a>
+        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="iAm">
+        <h3>I'm Miloš Borovšak.</h3>
+        <h5>A <span class="yellow">psychosynthesis therapist</span> in training.</h5>
+    </div>
+
+    <!-- Image -->
+    <div class="bg"></div>
+
+    <!-- What I do -->
+    <div class="callToAction">
+      <h2>Looking <span class="lighter">for</span> my next <b>opportunity</b> to make <span class="lighter">a</span> <b>change</b>.<br/>The <span class="yellow">psychological</span> way.</h2>
+    </div>
+
+    <!-- This is me -->
+    <div class="thisIsMe">
+        <div class="container">
+            <div class="rectangle"></div>
+            <div class="text-block">
+                <h2>This is <b>me</b></h2>
+            </div>
+        </div>
+
+        <div class="text">
+          <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus felis velit, sed pharetra metus bibendum sed. In mattis at purus non posuere. Pellentesque eget volutpat nibh. Suspendisse congue eleifend leo a tempus. Sed nec leo nunc. Sed dapibus nunc ac ullamcorper convallis. Integer pellentesque purus et tempor efficitur. Proin id turpis a enim vestibulum fermentum pharetra ac quam. Integer consectetur neque quam, nec tincidunt elit efficitur in. Fusce cursus vulputate sem a semper. Pellentesque ante metus, semper ac urna sed, scelerisque sagittis dui. Aenean et lacus nec mi sodales accumsan ut non ligula. Pellentesque quis facilisis augue, in cursus sapien. In interdum erat nec nulla mattis eleifend. 
+          </p>
+        </div>
+    </div>
+
+    <!-- I can help you with -->
+    <div>
+        <div class="container">
+            <div class="rectangle2"></div>
+            <div class="text-block">
+                <h2>I can <b>help</b> you with</h2>
+            </div>
+        </div>
+        <div class="competences">
+            <span class="white">Stress</span>
+            <span class="gray">Anxiety</span>
+            <span class="black">Depression</span>            
+            <span class="white">Insecurity</span>
+            <span class="gray">Guilt and shame</span>
+            <span class="black">Perfectionism</span>
+            <span class="white">Trust issues</span>
+            <span class="gray">Boundaries</span>
+            <span class="black">Identity crisis</span>
+            <span class="white">Lack of directions</span>
+            <span class="gray">Life meaning</span>
+            <span class="black">Frustrations</span>
+            <span class="white">Awakening spirituality</span>
+          </div>
+    </div>
+
+    <!-- Image 2 -->
+    <img src="photo-web.jpg" width="100%">
+
+    <!-- Footer -->
+    <footer>
+      Proudly made by: Miloš Borovšak. All rights reserved. 2022.
+    </footer>
+
+
+    
+<script>
+function openNav() {
+  document.getElementById("myNav").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.display = "none";
+}
+</script>
+     
+</body>
+</html>
