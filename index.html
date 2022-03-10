@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
@@ -11,7 +11,7 @@ body {
 
 body, html {
   height: 100%;
-  margin: 0;
+  margin: 0px 5%;
   background-color: #f9f9f9;
 }
 
@@ -246,6 +246,40 @@ span.lighter {
   font-size: large;
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
+
+.flex-item-right {
+    flex: 50%; 
+    order: 1;
+  }
+
+.flex-item-left {
+    flex: 50%;
+    order: 2;
+  }
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-right {
+    flex: 100%; 
+    order: 2; 
+  }
+
+  .flex-item-left {
+    flex: 100%;
+    order: 1;  
+  }
+
+  body, html {
+    margin: 0px;
+  }
+}
+
 footer {
   font-size: x-small;
   padding: 30px;
@@ -282,13 +316,21 @@ footer {
         <h5>A <span class="yellow">psychosynthesis therapist</span> in training.</h5>
     </div>
 
-    <!-- Image -->
-    <div class="bg"></div>
+    <div class="flex-container">
+        <!-- Image -->
+        <div class="flex-item-left"> <!-- style="flex-grow: 2" -->
+          <img src="Milos.jpg" width="100%"> 
+        </div>
 
-    <!-- What I do -->
-    <div class="callToAction">
-      <h2>Looking <span class="lighter">for</span> my next <b>opportunity</b> to make <span class="lighter">a</span> <b>change</b>.<br/>The <span class="yellow">psychological</span> way.</h2>
+        <!-- What I do -->
+        <div class="flex-item-right">
+          <div class="callToAction">
+              <h2>Looking <span class="lighter">for</span> my next <b>opportunity</b> to make <span class="lighter">a</span> <b>change</b>.<br/>The <span class="yellow">psychological</span> way.</h2>
+          </div>
+        </div>
+        </div>
     </div>
+    
 
     <!-- This is me -->
     <div class="thisIsMe">
