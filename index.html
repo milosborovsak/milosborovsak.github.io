@@ -218,11 +218,11 @@ span.lighter {
 
 .rectangle3 {
     position: absolute; 
-    height: 50px;
-    width: 75%;
+    height: 30vw;
+    width: 50px;
     background-color: yellow;
     right: 0;
-    top: -40px;
+    margin-top: 10px;
 }
 
 .text-block {
@@ -235,6 +235,12 @@ span.lighter {
 }
 
 .text2 {
+  margin: 0px 30px;
+  background-color: #f1f1f1;
+  padding: 30px;
+}
+
+.text3 {
   margin: 0px 30px;
   background-color: #f1f1f1;
   padding: 30px;
@@ -278,6 +284,15 @@ span.lighter {
   body, html {
     margin: 0px;
   }
+
+  .rectangle3 {
+    position: absolute; 
+    height: 50px;
+    width: 75%;
+    background-color: yellow;
+    right: 0;
+    top: -40px;
+  }
 }
 
 footer {
@@ -294,16 +309,16 @@ footer {
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="overlay-content">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#clients">Clients</a>
+        <a href="#home">Home</a>
+        <a href="#thisisme">This is me</a>
+        <a href="#offer">Offer</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
 
     <!-- Top Navigation Menu -->
     <div class="topnav">
-        <a href="#home">
+        <a>
             <div class="navplaceholder"></div>
         </a>
         <a href="javascript:void(0);" class="icon" onclick="openNav()">
@@ -312,6 +327,7 @@ footer {
     </div>
 
     <div class="iAm">
+      <a id="#home"></a>
         <h3>I'm Miloš Borovšak.</h3>
         <h5>A <span class="yellow">psychosynthesis therapist</span> in training.</h5>
     </div>
@@ -334,6 +350,7 @@ footer {
 
     <!-- This is me -->
     <div class="thisIsMe">
+      <a id="thisisme"></a>
         <div class="container">
             <div class="rectangle"></div>
             <div class="text-block">
@@ -374,16 +391,21 @@ footer {
           </div>
     </div>
 
-    <!-- Image 2 -->
-    <img src="photo-web.jpg" style="filter: grayscale(100%);" width="100%"> <!-- https://unsplash.com/photos/rRWiVQzLm7k -->
+    <div class="flex-container">
+      <div class="flex-item-left" style="flex-basis: 50%;">
+        <!-- Image 2 -->
+        <img src="photo-web.jpg" style="filter: grayscale(100%);" width="100%"> <!-- https://unsplash.com/photos/rRWiVQzLm7k -->
+      </div>
 
-    <!-- What I do-->
-      <div class="doing">
+      <div class="flex-item-right">
+      <!-- What I do-->
+        <div class="doing">
           <div class="container2">
               <div class="rectangle3"></div>
           </div>
           
           <div class="text2">
+            <a id="offer"></a>
             <h3>I <b>offer</b> you a safe, non-judgemental and confidential space where you can be <span class="yellow">seen</span> and <span class="yellow">understood</span>. </h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus felis velit, sed pharetra metus bibendum sed. 
@@ -393,7 +415,9 @@ footer {
             <button class="button button2">Start working with me</button>
           </div>
         </div>
-  
+      </div>
+      </div>
+
 
     <!-- Testemonials & collaborations -->
     <div class="tandc">
