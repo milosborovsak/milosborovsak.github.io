@@ -225,6 +225,15 @@ span.lighter {
     margin-top: 10px;
 }
 
+.rectangle4 {
+    position: absolute; 
+    height: 50px;
+    width: 85%;
+    background-color: yellow;
+    left: 0;
+    top: 20px;
+}
+
 .text-block {
     position: absolute;
     margin: 32px 25px;
@@ -246,6 +255,10 @@ span.lighter {
   padding: 30px;
 }
 
+.testimonials {
+  background-color: #f1f1f1;
+}
+
 .competences {
   margin: 25px;
   line-height: 2;
@@ -256,7 +269,6 @@ span.lighter {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
 }
 
 .flex-item-right {
@@ -295,6 +307,75 @@ span.lighter {
   }
 }
 
+.testimonials {
+  background-color: #f1f1f1;
+}
+
+.flex-container-tes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-item-tes {
+  border: 2px solid black;
+  max-width: 25%;
+  text-align: center;
+}
+
+.colaboration {
+  background-color: white;
+}
+
+.flex-container-colab {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-item-colab {
+  flex: 20%;
+  text-align: center;
+  margin: 15px;
+}
+
+/* Input CSS */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  resize: vertical;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.contact {
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* End Inpur CSS */
+
 footer {
   font-size: x-small;
   padding: 30px;
@@ -327,7 +408,7 @@ footer {
     </div>
 
     <div class="iAm">
-      <a id="#home"></a>
+      <a id="home"></a>
         <h3>I'm Miloš Borovšak.</h3>
         <h5>A <span class="yellow">psychosynthesis therapist</span> in training.</h5>
     </div>
@@ -429,12 +510,63 @@ footer {
       </div>
 
       <div class="text3">
-        <p>
-            Working with Miloš... <br/> Mark
-        </p>
-        <p>I colaborate with Institute of Psychosynthesis London, European Association of Psychosynthesis, UKCP, Legacy17, Slovenian Scout Organization.</p>
+        <!-- Testimonials -->
+        <div class="testimonials">
+          <p>Working with Miloš...</p>
+            <div  class="flex-container-tes">
+              <div class="flex-item-tes">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Markus Aurelius</p>
+              </div>
+              <div class="flex-item-tes">
+                <p>Ut rhoncus felis velit, sed pharetra metus bibendum sed.</p>
+                <p>Gaia Julia Cezara</p>
+              </div>
+              <div class="flex-item-tes">
+                <p>Sed dapibus nunc ac ullamcorper convallis. </p>
+                <p>Julia Aquilia Severa </p>
+              </div>
+        </div>
+
+        <!-- Colaborations-->
+        <div class="colaboration">
+          <h4>I colaborate with:</h4>
+            <div  class="flex-container-colab">
+              <div class="flex-item-colab">
+                <img src="iopl.png" style="filter: invert(1);" width="200px">
+              </div>
+              <div class="flex-item-colab">
+                <img src="epa.png"  width="200px">
+              </div>
+              <div class="flex-item-colab">
+                <img src="UKCP_Master_Logo.webp" width="200px">
+              </div>
+              <div class="flex-item-colab">
+                <img src="Legacy-logo-transp-text.png"  width="200px">
+              </div>
+        </div>
       </div>
     </div>
+    </div>
+
+    
+      <a id="contact"></a>
+      <div class="container">
+          <div class="rectangle4"></div>
+          <div class="text-block">
+              <h2><b>Contact</b></h2>
+          </div>
+      </div>
+    
+      <!-- Contact Form-->
+      <div class="contact">
+        <form action="/action_page.php">
+          <input type="text" id="fname" name="firstname" placeholder="Enter your name...">
+          <input type="email" id="email" name="email" placeholder="Enter your email..."> 
+          <textarea id="subject" name="subject" placeholder="Enter your message..." style="height:200px"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
 
     <!-- Footer -->
     <footer>
