@@ -66,7 +66,7 @@ body, html {
   width: 100%;
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   top: 0;
   left: 0;
   background-color: rgb(0,0,0);
@@ -221,7 +221,7 @@ span.lighter {
     width: 5vw;
     left: 90%;
     margin-top: 10px;
-    z-index: 2;
+    z-index: 10;
 }
 
 .rectangle4 {
@@ -303,6 +303,14 @@ span.lighter {
     left: 25%;
     top: -40px;
   }
+
+  .button1 {
+    width: 40%;
+  }
+
+  .icecream {
+    margin: 10px 25px;
+  }
 }
 
 .testimonials {
@@ -337,38 +345,50 @@ span.lighter {
   margin: 15px;
 }
 
-/* Input CSS */
+  /* Input CSS */
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid black;
+  margin-bottom: -1px;
   box-sizing: border-box;
-  margin-top: 6px;
   resize: vertical;
+  background-color: white;
+}
+
+textarea {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: smaller;
+    height: 100px;
+}
+
+textarea:hover, input:hover, input[type="email"]:hover {
+  background-color: #f1f1f1;
 }
 
 input[type=email] {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid black;
   box-sizing: border-box;
-  margin-top: 6px;
   resize: vertical;
+  margin-bottom: -1px;
+  background-color: white;
 }
 
 input[type=submit] {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   padding: 12px 20px;
   border: 1px solid black;
   cursor: pointer;
+  margin-top: 30px;
+  font-weight: bolder;
 }
 
 .contact {
   border-radius: 5px;
-  background-color: #f1f1f1;
   padding: 20px;
 }
 
@@ -388,10 +408,10 @@ footer {
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="overlay-content">
-        <a href="#home">Home</a>
-        <a href="#thisisme">This is me</a>
-        <a href="#offer">Offer</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" onclick="closeNav()">Home</a>
+        <a href="#thisisme" onclick="closeNav()">This is me</a>
+        <a href="#offer" onclick="closeNav()">Offer</a>
+        <a href="#contact" onclick="closeNav()">Contact</a>
       </div>
     </div>
 
@@ -405,8 +425,7 @@ footer {
         </a>
     </div>
 
-    <div class="iAm">
-      <a id="home"></a>
+    <div class="iAm" id="home">
         <h3>I'm Miloš Borovšak.</h3>
         <h5>A <span class="yellow">psychosynthesis therapist</span> in training.</h5>
     </div>
@@ -428,8 +447,7 @@ footer {
     
 
     <!-- This is me -->
-    <div class="thisIsMe">
-      <a id="thisisme"></a>
+    <div class="thisIsMe" id="thisisme">
         <div class="container">
             <div class="rectangle rectangle1"></div>
             <div class="text-block">
@@ -483,8 +501,7 @@ footer {
               <div class="rectangle rectangle3"></div>
           </div>
           
-          <div class="text2">
-            <a id="offer"></a>
+          <div class="text2" id="offer">
             <h3>I <b>offer</b> you a safe, non-judgemental and confidential space where you can be <span class="yellow">seen</span> and <span class="yellow">understood</span>. </h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus felis velit, sed pharetra metus bibendum sed. 
@@ -548,23 +565,43 @@ footer {
     </div>
 
     
-      <a id="contact"></a>
-      <div class="container">
+      <div class="container" id="contact">
           <div class="rectangle rectangle4"></div>
           <div class="text-block">
               <h2><b>Contact</b></h2>
           </div>
       </div>
     
-      <!-- Contact Form-->
-      <div class="contact">
-        <form action="/action_page.php">
-          <input type="text" id="fname" name="firstname" placeholder="Enter your name...">
-          <input type="email" id="email" name="email" placeholder="Enter your email..."> 
-          <textarea id="subject" name="subject" placeholder="Enter your message..." style="height:200px"></textarea>
-          <input type="submit" value="Submit">
-        </form>
-      </div>
+      <div class="flex-container">
+        <!-- Image -->
+        <div class="flex-item-right icecream"> <!-- style="flex-grow: 2" -->
+          <p>I enjoy working with dedicated creatives from businesses that make the world beautiful. We can do so much together. Let’s talk. <br/> 
+            <br/>
+            If you want mail: milos@email.com <br/>
+            <br/>
+            If you want to hear my voice: +31 6 000 000 0000 <br/>
+            <br/>
+            If you want to be influenced: @milos <br/>
+            <br/>
+            If you want to see me irl: I’ll be at R'dam Ice Cream. Buy me an &#127846;.  <br/> </p>
+        </div>
+
+        <!-- What I do -->
+        <div class="flex-item-right">
+            <!-- Contact Form-->
+            <div class="contact">
+              <form action="/action_page.php">
+                <input type="text" id="fname" name="firstname" placeholder="Enter your name...">
+                <input type="email" id="email" name="email" placeholder="Enter your email..."> 
+                <textarea id="subject" name="subject" placeholder="Enter your message..."></textarea>
+                <input type="submit" value="SUBMIT">
+              </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
 
     <!-- Footer -->
     <footer>
