@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
 
 <style>
 body {
@@ -44,7 +45,7 @@ body, html {
   color: black; 
   border: 2px solid black;
   margin: 0px 25px 25px 25px;
-  width: 30%;
+  width: 50%;
   
 }
 
@@ -210,10 +211,12 @@ span.lighter {
 
 .rectangle1 {
   width: 35%;
+  left: -15%;
 }
 
 .rectangle2 {
     width: 60%;
+    left: -15%;
 }
 
 .rectangle3 {
@@ -226,6 +229,7 @@ span.lighter {
 
 .rectangle4 {
     width: 85%;
+    left: -15%;
 }
 
 .text-block {
@@ -245,16 +249,11 @@ span.lighter {
 
 .text3 {
   margin: 0px 30px;
-  background-color: #f1f1f1;
   padding: 30px;
 }
 
-.testimonials {
-  background-color: #f1f1f1;
-}
-
 .competences {
-  margin: 25px;
+  margin: 50px 25px 75px;
   line-height: 2;
   font-size: large;
 }
@@ -304,32 +303,28 @@ span.lighter {
     top: -40px;
   }
 
-  .button1 {
-    width: 40%;
-  }
-
   .icecream {
     margin: 10px 25px;
   }
-}
 
-.testimonials {
-  background-color: #f1f1f1;
+  .flex-item-tes {
+    width: 90% !important;
+  }
+
 }
 
 .flex-container-tes {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-around;
 }
 
 .flex-item-tes {
-  border: 2px solid black;
-  max-width: 25%;
   text-align: center;
-}
-
-.colaboration {
-  background-color: white;
+  margin: 15px;
+  background-color: #f1f1f1;
+  width: 30%;
 }
 
 .flex-container-colab {
@@ -460,7 +455,7 @@ footer {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus felis velit, sed pharetra metus bibendum sed. In mattis at purus non posuere. Pellentesque eget volutpat nibh. Suspendisse congue eleifend leo a tempus. Sed nec leo nunc. Sed dapibus nunc ac ullamcorper convallis. Integer pellentesque purus et tempor efficitur. Proin id turpis a enim vestibulum fermentum pharetra ac quam. Integer consectetur neque quam, nec tincidunt elit efficitur in. Fusce cursus vulputate sem a semper. Pellentesque ante metus, semper ac urna sed, scelerisque sagittis dui. Aenean et lacus nec mi sodales accumsan ut non ligula. Pellentesque quis facilisis augue, in cursus sapien. In interdum erat nec nulla mattis eleifend. 
           </p>
         </div>
-        <button class="button button1">More about <span class="yellow">psychosynthesis</span></button>
+        <a class="button button1">More about <span class="yellow">psychosynthesis</span></a>
     </div>
 
     <!-- I can help you with -->
@@ -472,6 +467,7 @@ footer {
             </div>
         </div>
         <div class="competences">
+            <span class="black">Crisis of meaning</span>            
             <span class="white">Stress</span>
             <span class="gray">Anxiety</span>
             <span class="black">Depression</span>            
@@ -482,9 +478,10 @@ footer {
             <span class="gray">Boundaries</span>
             <span class="black">Identity crisis</span>
             <span class="white">Lack of directions</span>
-            <span class="gray">Life meaning</span>
+            <span class="gray">Finding meaning, purpose, and values</span>
             <span class="black">Frustrations</span>
             <span class="white">Awakening spirituality</span>
+            <span class="gray">Loneliness and aloneness</span>
           </div>
     </div>
 
@@ -494,21 +491,26 @@ footer {
         <img src="photo-web.jpg" style="filter: grayscale(100%);" width="100%"> <!-- https://unsplash.com/photos/rRWiVQzLm7k -->
       </div>
 
-      <div class="flex-item-right">
+      <div class="flex-item-right" id="offer">
       <!-- What I do-->
         <div class="doing">
           <div class="container2">
               <div class="rectangle rectangle3"></div>
           </div>
           
-          <div class="text2" id="offer">
+          <div class="text2">
             <h3>I <b>offer</b> you a safe, non-judgemental and confidential space where you can be <span class="yellow">seen</span> and <span class="yellow">understood</span>. </h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus felis velit, sed pharetra metus bibendum sed. 
                 In mattis at purus non posuere. Pellentesque eget volutpat nibh. Suspendisse congue eleifend leo a tempus. Sed nec leo nunc. 
                 Sed dapibus nunc ac ullamcorper convallis. 
             </p>
-            <button class="button button2">Start working with me</button>
+            <div class="">
+              <h3>Limited offer available</h3>
+              <p>As a psychosynthesis counsellor in training and in supervision, I am currently offering low-cost sessions. </p>
+              <p>I offer 30 minutes of free, preliminary chat to answer any questions you may have and to discuss how I may be able to support you. </p>
+              <a href="#contact" class="button button2">Start working with me</a>
+            </div>
           </div>
         </div>
       </div>
@@ -527,13 +529,13 @@ footer {
       <div class="text3">
         <!-- Testimonials -->
         <div class="testimonials">
-          <p>Working with Miloš...</p>
+          <h4>Working with Miloš...</h4>
             <div  class="flex-container-tes">
               <div class="flex-item-tes">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <p>Markus Aurelius</p>
               </div>
-              <div class="flex-item-tes">
+              <div class="flex-item-tes" >
                 <p>Ut rhoncus felis velit, sed pharetra metus bibendum sed.</p>
                 <p>Gaia Julia Cezara</p>
               </div>
@@ -544,7 +546,7 @@ footer {
         </div>
 
         <!-- Colaborations-->
-        <div class="colaboration">
+        <div class="">
           <h4>I colaborate with:</h4>
             <div  class="flex-container-colab">
               <div class="flex-item-colab">
