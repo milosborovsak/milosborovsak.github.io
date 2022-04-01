@@ -12,7 +12,7 @@ body {
 
 body, html {
   height: 100%;
-  margin: 0px 5%;
+  margin: auto;
   background-color: #f9f9f9;
 }
 
@@ -21,11 +21,14 @@ body, html {
   background-image: url(Milos.jpg);
   /* Full height */
   height: 100%; 
-
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.button-container{
+    text-align: center;
 }
 
 .button {
@@ -44,7 +47,7 @@ body, html {
   background-color: white; 
   color: black; 
   border: 2px solid black;
-  margin: 0px 25px 25px 25px;
+  margin: auto;
   width: 50%;
   
 }
@@ -142,7 +145,12 @@ body, html {
 }
 
 .iAm {
-    margin: 25px;
+    margin: 0px 10px;
+}
+
+h2 {
+  font-size: xx-large;
+  margin-top: 10px;
 }
 
 h3 {
@@ -155,6 +163,12 @@ h5 {
     font-weight: lighter;
 }
 
+h6 {
+    font-weight: bold;
+    font-size: large;
+    margin: 0px;
+}
+
 span.yellow {
     background-color: yellow;
 }
@@ -162,16 +176,21 @@ span.yellow {
 span.black {
   background-color: black;
   color: white;
-  padding: 0px 4px;
+  padding: 5px 5px;
+  margin: 5px;
+
 }
 
 span.gray {
   background-color: lightgray;
-  padding: 0px 4px;
+  padding: 5px 5px;
+  margin: 5px;
 }
 
 span.white {
-  padding: 0px 4px;
+  padding: 5px 5px;
+  margin: 5px;
+
 }
 
 span.lighter {
@@ -180,18 +199,17 @@ span.lighter {
 }
 
 .callToAction {
-  font-size: 2vw;
-  text-align: left;
-  margin: 50px 25px;
+  font-size: 4vw;
+  margin: 50px 20px;
 }
 
 .thisIsMe {
-    background-color: white;
+    margin: 20px;
 }
 
 .container {
   position: relative;
-  margin: 20px 0px;
+  margin: 40px 0px;
   height: 70px;
 }
 
@@ -220,12 +238,13 @@ span.lighter {
 }
 
 .rectangle3 {
-    height: 30vw;
-    width: 5vw;
-    left: 90%;
-    margin-top: 10px;
-    z-index: 10;
-}
+    position: absolute; 
+    height: 50px;
+    width: 75%;
+    background-color: yellow;
+    left: 25%;
+  }
+
 
 .rectangle4 {
     width: 85%;
@@ -234,7 +253,7 @@ span.lighter {
 
 .text-block {
     position: absolute;
-    margin: 32px 25px;
+    margin: 32px 8px;
 }
 
 .text {
@@ -247,98 +266,77 @@ span.lighter {
   padding: 30px;
 }
 
-.text3 {
-  margin: 0px 30px;
-  padding: 30px;
-}
-
 .competences {
-  margin: 50px 25px 75px;
-  line-height: 2;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 2.4;
   font-size: large;
 }
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.flex-item-right {
-    flex: 50%; 
-    order: 1;
-  }
-
-.flex-item-left {
-    flex: 50%;
-    order: 2;
-  }
-
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
-@media (max-width: 800px) {
-  .flex-item-right {
-    flex: 100%; 
-    order: 2; 
-  }
+@media (min-width: 600px) {
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 
-  .flex-item-left {
-    flex: 100%;
-    order: 1;  
-  }
+    .flex-item-left {
+        padding: 10px;
+        flex: 45%;
+        order: 1;
+        overflow: hidden;
+    }
 
-  body, html {
-    margin: 0px;
-  }
+    .flex-item-right {
+        padding: 10px;
+        flex: 45%;
+    }
 
-  .callToAction {
-  font-size: 4vw;
-  }
+    body, html {
+        margin: auto;
+        max-width: 90%;
+    }
 
-  .rectangle3 {
-    position: absolute; 
-    height: 50px;
-    width: 75%;
-    background-color: yellow;
-    left: 25%;
-    top: -40px;
-  }
+    .callToAction {
+        font-size: 1.8vw;
+        text-align: left;
+    }
 
-  .icecream {
-    margin: 10px 25px;
-  }
+    .rectangle3 {
+        height: 30vw;
+        width: 5vw;
+        left: 98%;
+        z-index: 10;
+    }
 
-  .flex-item-tes {
-    width: 90% !important;
-  }
+    .flex-container-tes {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
 
-}
+    .flex-item-tes {
+        text-align: center;
+        margin: 5px;
+        background-color: #f1f1f1;
+        width: 30%;
+    }
 
-.flex-container-tes {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-}
+    .flex-container-colab {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
 
-.flex-item-tes {
-  text-align: center;
-  margin: 15px;
-  background-color: #f1f1f1;
-  width: 30%;
-}
-
-.flex-container-colab {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 }
 
 .flex-item-colab {
-  flex: 20%;
-  text-align: center;
-  margin: 15px;
-}
+        text-align: center;
+        margin: 25px;
+    }
 
   /* Input CSS */
 input[type=text], select, textarea {
@@ -384,7 +382,7 @@ input[type=submit] {
 
 .contact {
   border-radius: 5px;
-  padding: 20px;
+  padding-top: 20px;
 }
 
 .underline {
@@ -392,12 +390,15 @@ input[type=submit] {
   text-decoration-color:yellow;
   text-decoration-thickness: 5px;
 }
-
 /* End Inpur CSS */
+
+p {
+  line-height: 1.6;
+}
 
 footer {
   font-size: x-small;
-  padding: 30px;
+  padding-top: 30px;
   text-align: center;
 }
 </style>
@@ -410,8 +411,8 @@ footer {
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="overlay-content">
         <a href="#home" onclick="closeNav()">Home</a>
-        <a href="#thisisme" onclick="closeNav()">This is me</a>
-        <a href="#offer" onclick="closeNav()">Offer</a>
+        <a href="#thisisme" onclick="closeNav()">Offer</a>
+        <a href="#offer" onclick="closeNav()">This is me</a>
         <a href="#contact" onclick="closeNav()">Contact</a>
       </div>
     </div>
@@ -429,47 +430,71 @@ footer {
     <div class="iAm" id="home">
         <h3>I'm Miloš Borovšak.</h3>
         <h5>A <span class="yellow">psychosynthesis therapist</span> in training.</h5>
-    </div>
+    </div>  
 
-    <div class="flex-container">
+    <div class="flex-container"><!-- class="flex-container"-->
         <!-- Image -->
-        <div class="flex-item-left"> <!-- style="flex-grow: 2" -->
+        <div class="flex-item-left"> <!-- class="flex-item-left" -->
           <img src="Milos.jpg" width="100%"> 
         </div>
 
         <!-- What I do -->
-        <div class="flex-item-right">
-          <div class="callToAction">
-              <h2>Looking <span class="lighter">for</span> my next <b>opportunity</b> to make <span class="lighter">a</span> <b>change</b>.<br/>The <span class="yellow">psychological</span> way.</h2>
+        <div class="flex-item-right"> <!-- class="flex-item-left" -->
+          <div class="callToAction"> 
+              <h1>Looking <span class="lighter">for</span> my next <b>opportunity</b> to make <span class="lighter">a</span> <b>change</b>.<br/>The <span class="yellow">psychological</span> way.</h1>
           </div>
         </div>
         </div>
     </div>
     
-
-    <!-- This is me -->
-    <div class="thisIsMe" id="thisisme">
+    <!-- Offer -->
+    <div class="thisIsMe" id="thisisme" style="background-color: white;">
         <div class="container">
             <div class="rectangle rectangle1"></div>
             <div class="text-block">
-                <h2>This is <b>me</b></h2>
+                <h2>I offer you</h2>
             </div>
         </div>
 
-        <div class="text">
-          <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus felis velit, sed pharetra metus bibendum sed. In mattis at purus non posuere. Pellentesque eget volutpat nibh. Suspendisse congue eleifend leo a tempus. Sed nec leo nunc. Sed dapibus nunc ac ullamcorper convallis. Integer pellentesque purus et tempor efficitur. Proin id turpis a enim vestibulum fermentum pharetra ac quam. Integer consectetur neque quam, nec tincidunt elit efficitur in. Fusce cursus vulputate sem a semper. Pellentesque ante metus, semper ac urna sed, scelerisque sagittis dui. Aenean et lacus nec mi sodales accumsan ut non ligula. Pellentesque quis facilisis augue, in cursus sapien. In interdum erat nec nulla mattis eleifend. 
-          </p>
+        <div class="flex-container"><!-- class="flex-container"-->
+            <div class="flex-item-left"> <!-- class="flex-container"-->
+                <div class="" >
+
+                    <p style="margin-top: 0px;">a <b>safe, non-judgemental and confidential space</b> where you can be <b>seen and understood</b>. </h3>
+                    <p>
+                        I <span class=""><b>listen</b></span> to your words. I <b>listen</b> beneath the words. I <b>listen</b> to the silences and the pauses between your words.
+                        I can hold space for you however challenging the situation might be. <!-- Marisha Peer & Rich Litvin-->
+                    </p>
+                    <p>
+                        I like to find out <b>what works for you as an individual</b> not what is generic for everybody. 
+        
+                        <!--I love to work with...-->
+                    </p>
+                </div>
+            </div>
+    
+            <!-- What I do -->
+            <div class="flex-item-left"> <!-- class="flex-container"-->
+                <div class="" >
+                    <h6 class="underline">Limited offer available</h6>
+                    <p>As a psychosynthesis counsellor in training and in supervision, I am currently offering <b>low-cost sessions</b>. </p>
+                    <p>I offer <b>30 minutes of free, preliminary chat</b> to answer any questions you may have and to discuss how I may be able to support you. </p>
+                </div>
+                <div class="button-container">
+                    <a href="#contact" class="button button2">Start working with me</a>
+                </div>
+            </div>
+            </div>
         </div>
-        <a class="button button1">More about psychosynthesis</a>
+
     </div>
 
     <!-- I can help you with -->
-    <div>
+    <div class="thisIsMe">
         <div class="container">
             <div class="rectangle rectangle2"></div>
             <div class="text-block">
-                <h2>I can <b>help</b> you with</h2>
+                <h2>I can help you with</h2>
             </div>
         </div>
         <div class="competences">
@@ -484,76 +509,105 @@ footer {
             <span class="gray">Boundaries</span>
             <span class="black">Identity crisis</span>
             <span class="white">Lack of directions</span>
-            <span class="gray">Finding meaning, purpose, and values</span>
+            <span class="gray">Loneliness and aloneness</span>
             <span class="black">Frustrations</span>
             <span class="white">Awakening spirituality</span>
-            <span class="gray">Loneliness and aloneness</span>
+            <span class="gray">Finding meaning, purpose, and values</span>
           </div>
     </div>
 
     <div class="flex-container">
-      <div class="flex-item-left" style="flex-basis: 50%;">
+      <div class="flex-item-left">
         <!-- Image 2 -->
         <img src="photo-web.jpg" style="filter: grayscale(100%);" width="100%"> <!-- https://unsplash.com/photos/rRWiVQzLm7k -->
       </div>
 
       <div class="flex-item-right" id="offer">
       <!-- What I do-->
-        <div class="doing">
+        <div class="">
           <div class="container2">
               <div class="rectangle rectangle3"></div>
           </div>
-          
-          <div class="text2">
-            <h3>I <b>offer</b> you a safe, non-judgemental and confidential space where you can be <span class="yellow">seen</span> and <span class="yellow">understood</span>. </h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus felis velit, sed pharetra metus bibendum sed. 
-                In mattis at purus non posuere.
+
+          <div class="thisIsMe" >
+            <!-- https://www.counselling-directory.org.uk/psychosynthesis.html#theoriesofpsychosynthesis -->
+            <p>A key assumption of psychosynthesis is that <b>every human being has a vast potential for personal growth</b> - a natural tendency to synthesise all aspects
+             of their being to become the fullest realisation of themselves. Psychosynthesis is a conscious attempt to cooperate with this natural process of personal
+             development in order to foster awareness, self-healing, and a greater connection to the ever-changing nature of human life.  
             </p>
-            <div class="">
-              <h3 class="underline">Limited offer available</h3>
-              <p>As a psychosynthesis counsellor in training and in supervision, I am currently offering low-cost sessions. </p>
-              <p>I offer 30 minutes of free, preliminary chat to answer any questions you may have and to discuss how I may be able to support you. </p>
-              <a href="#contact" class="button button2">Start working with me</a>
-            </div>
+            <p>
+                The therapeutic framework of psychosynthesis can help a wide range of individuals to overcome life challenges. Therapists in psychosynthesis 
+                counselling work to establish a specific relationship with their clients and will draw on a range of diverse techniques to guide them through
+                 the process of <b>self-actualisation and self-realisation</b>. 
+            </p>
           </div>
+
+        <!-- More about psychosynthesis
+          <div class="button-container">
+            <a class="button button1">More about psychosynthesis</a>
+          </div>
+        -->
         </div>
       </div>
       </div>
 
+          <!-- This is me -->
+    <div class="thisIsMe" id="thisisme" style="background-color: white;">
+        <div class="container">
+            <div class="rectangle rectangle1"></div>
+            <div class="text-block">
+                <h2>This is <b>me</b></h2>
+            </div>
+        </div>
+
+        <div class="" style="max-width: 800px; margin: auto;">
+          <p>
+            My name is <b>Miloš</b> [pronounced 'meelosh'], I am a <b>Psychosynthesis Therapist</b> in training (under supervision) at The Institute of Psychosynthesis London in affiliation with Middlesex University London. I am UKCP (UK Council for Psychotherapy) registered. 
+          </p>
+          <p>
+            My original career was as a Reaserch Scientist in Physics and later on developer in a start-up. I incrisingly found that I wanted to help people personaly than trying to improve code or mathematical models. I helped people in my free time where I was actively involved in leadership and traininer trainings in National Scout Organisation. I decided to transform my passion and free time activity into my profession. I joined Institute of Psychosynthesis where I am engaged in very personal journey that offers me insides about my physical, emotional and mental worlds. 
+          </p>
+          <p>
+            I am <b>passionate about guiding, supporting and helping people</b> to understand who they are, where they are coming from and where they want to go in the future.
+          </p>
+        </div>
+    </div>
 
     <!-- Testemonials & collaborations -->
-    <div class="tandc">
+    <div class="thisIsMe">
       <div class="container">
-          <div class=" rectangle rectangle1"></div>
+          <div class=" rectangle rectangle2"></div>
           <div class="text-block">
-              <h2>Testemonials & <b>collaborations</b></h2>
+              <h2>Testemonials</h2>
           </div>
       </div>
 
-      <div class="text3">
+      <div class="">
         <!-- Testimonials -->
         <div class="testimonials">
-          <h4>Working with Miloš...</h4>
             <div  class="flex-container-tes">
               <div class="flex-item-tes">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Markus Aurelius</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>Markus Aurelius</p>
               </div>
               <div class="flex-item-tes" >
-                <p>Ut rhoncus felis velit, sed pharetra metus bibendum sed.</p>
-                <p>Gaia Julia Cezara</p>
+                <p>Ut rhoncus felis velit, sed pharetra metus bibendum sed.<br/>Gaia Julia Cezara</p>
               </div>
               <div class="flex-item-tes">
-                <p>Sed dapibus nunc ac ullamcorper convallis. </p>
-                <p>Julia Aquilia Severa </p>
+                <p>Sed dapibus nunc ac ullamcorper convallis. <br/>Julia Aquilia Severa </p>
               </div>
+        </div>
+
+
+        <div class="container">
+                <div class=" rectangle rectangle1"></div>
+                <div class="text-block">
+                    <h2>Collaborations</h2>
+                </div>
         </div>
 
         <!-- Colaborations-->
         <div class="">
-          <h4>I colaborate with:</h4>
-            <div  class="flex-container-colab">
+            <div class="flex-container-colab">
               <div class="flex-item-colab">
                 <img src="iopl.png" style="filter: invert(1);" width="200px">
               </div>
@@ -581,7 +635,7 @@ footer {
     
       <div class="flex-container">
         <!-- Image -->
-        <div class="flex-item-right icecream"> <!-- style="flex-grow: 2" -->
+        <div class="flex-item-right"> <!-- style="flex-grow: 2" -->
           <p>I enjoy working with dedicated creatives from businesses that make the world beautiful. We can do so much together. Let’s talk. <br/> 
             <br/>
             If you want mail: milos@email.com <br/>
