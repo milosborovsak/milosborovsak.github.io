@@ -243,6 +243,7 @@ span.lighter {
     width: 75%;
     background-color: yellow;
     left: 25%;
+    top: -40px;
   }
 
 
@@ -273,7 +274,15 @@ span.lighter {
   font-size: large;
 }
 
-/* Responsive layout - makes a one column-layout instead of a two-column layout */
+/* Responsive layout - hides some elements in between 
+@media (max-width: 600px) and (min-width: 800px) {
+  .rectangle3 {
+    display: none;
+  }
+}
+*/
+
+/* Responsive layout - makes a two-column layout instead of a one */
 @media (min-width: 600px) {
     .flex-container {
         display: flex;
