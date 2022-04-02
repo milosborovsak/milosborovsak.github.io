@@ -55,9 +55,14 @@ body, html {
 .button2 {
   background-color: #f1f1f1; 
   color: black; 
+  font-weight: bold;
   border: 2px solid black;
   margin: 0px;
   width: 50%;
+}
+
+.button2:hover {
+  background-color: yellow;
 }
 
 .img {
@@ -205,6 +210,12 @@ span.lighter {
 
 .thisIsMe {
     margin: 20px;
+}
+
+.me {
+  max-width: 800px; 
+  margin: auto; 
+  padding: 0px 20px;
 }
 
 .container {
@@ -406,6 +417,12 @@ p {
   line-height: 1.6;
 }
 
+.whitebackground {
+  background-color: white;
+  padding-bottom: 20px;
+
+}
+
 footer {
   font-size: x-small;
   padding-top: 30px;
@@ -458,11 +475,11 @@ footer {
     </div>
     
     <!-- Offer -->
-    <div class="thisIsMe" id="thisisme" style="background-color: white;">
+    <div class="thisIsMe whitebackground" id="thisisme">
         <div class="container">
             <div class="rectangle rectangle1"></div>
             <div class="text-block">
-                <h2>I offer you</h2>
+                <h2>I <b>offer</b> you</h2>
             </div>
         </div>
 
@@ -504,7 +521,7 @@ footer {
         <div class="container">
             <div class="rectangle rectangle2"></div>
             <div class="text-block">
-                <h2>I can help you with</h2>
+                <h2>I can <b>help</b> you with</h2>
             </div>
         </div>
         <div class="competences">
@@ -541,15 +558,16 @@ footer {
 
           <div class="thisIsMe" >
             <!-- https://www.counselling-directory.org.uk/psychosynthesis.html#theoriesofpsychosynthesis -->
-            <p>A key assumption of psychosynthesis is that <b>every human being has a vast potential for personal growth</b> - a natural tendency to synthesise all aspects
-             of their being to become the fullest realisation of themselves. Psychosynthesis is a conscious attempt to cooperate with this natural process of personal
-             development in order to foster awareness, self-healing, and a greater connection to the ever-changing nature of human life.  
-            </p>
-            <p>
-                The therapeutic framework of psychosynthesis can help a wide range of individuals to overcome life challenges. Therapists in psychosynthesis 
-                counselling work to establish a specific relationship with their clients and will draw on a range of diverse techniques to guide them through
-                 the process of <b>self-actualisation and self-realisation</b>. 
-            </p>
+            <p>A key assumption of psychosynthesis is that <b>every human being has a vast potential for personal growth</b> - a natural tendency to synthesize all aspects
+              of their being to become the fullest realization of themselves. Psychosynthesis is a conscious attempt to cooperate with this natural process of personal
+              development to foster awareness, self-healing, and a greater connection to the ever-changing nature of human life.  
+             </p>
+             <p>
+                 The therapeutic framework of psychosynthesis can help a wide range of individuals to overcome life challenges. Therapists in psychosynthesis 
+                 counseling work to establish a specific relationship with their clients and will draw on a range of diverse techniques to guide them through
+                  the process of <b> self-actualization and self-realisation</b>. 
+             </p>
+ 
           </div>
 
         <!-- More about psychosynthesis
@@ -562,7 +580,7 @@ footer {
       </div>
 
           <!-- This is me -->
-    <div class="thisIsMe" id="thisisme" style="background-color: white;">
+    <div class="thisIsMe whitebackground" id="thisisme">
         <div class="container">
             <div class="rectangle rectangle1"></div>
             <div class="text-block">
@@ -570,15 +588,15 @@ footer {
             </div>
         </div>
 
-        <div class="" style="max-width: 800px; margin: auto;">
+        <div class="me">
           <p>
             My name is <b>Miloš</b> [pronounced 'meelosh'], I am a <b>Psychosynthesis Therapist</b> in training (under supervision) at The Institute of Psychosynthesis London in affiliation with Middlesex University London. I am UKCP (UK Council for Psychotherapy) registered. 
           </p>
           <p>
-            My original career was as a Reaserch Scientist in Physics and later on developer in a start-up. I incrisingly found that I wanted to help people personaly than trying to improve code or mathematical models. I helped people in my free time where I was actively involved in leadership and traininer trainings in National Scout Organisation. I decided to transform my passion and free time activity into my profession. I joined Institute of Psychosynthesis where I am engaged in very personal journey that offers me insides about my physical, emotional and mental worlds. 
+            My original career was as a Research Scientist in Physics and later on as a developer in a start-up. I increasingly found that I wanted to help people personally than trying to improve code or mathematical models. I helped people in my free time where I am actively involved in leadership training and Train the Trainer training in National Scout Organisation. I decided to transform my passion and free time activity into my profession. I joined the Institute of Psychosynthesis where I am engaged in a very personal journey that offers me insides into my physical, emotional and mental worlds. 
           </p>
           <p>
-            I am <b>passionate about guiding, supporting and helping people</b> to understand who they are, where they are coming from and where they want to go in the future.
+            I am <b>passionate about guiding, supporting, and helping people</b> to understand who they are, where they are coming from, and where they want to go in the future.
           </p>
         </div>
     </div>
@@ -619,16 +637,24 @@ footer {
         <div class="">
             <div class="flex-container-colab">
               <div class="flex-item-colab">
-                <img src="iopl.png" style="filter: invert(1);" width="200px">
+                <a href="https://www.psychosynthesis.org/" target="_blank" rel="noopener noreferrer">
+                  <img src="iopl.png" style="filter: invert(1);" width="200px">
+                </a>
               </div>
               <div class="flex-item-colab">
-                <img src="epa.png"  width="200px">
+                <a href="https://www.creatingtheepa.com/" target="_blank" rel="noopener noreferrer">
+                  <img src="epa.png"  width="200px">
+                </a>
               </div>
               <div class="flex-item-colab">
-                <img src="UKCP_Master_Logo.webp" width="200px">
+                <a href="https://www.psychotherapy.org.uk/" target="_blank" rel="noopener noreferrer">
+                  <img src="UKCP_Master_Logo.webp" width="200px">
+                </a>
               </div>
               <div class="flex-item-colab">
-                <img src="Legacy-logo-transp-text.png"  width="200px">
+                <a href="https://legacy17.org/" target="_blank" rel="noopener noreferrer">
+                  <img src="Legacy-logo-transp-text.png"  width="200px">
+                </a>
               </div>
         </div>
       </div>
@@ -639,14 +665,14 @@ footer {
       <div class="container" id="contact">
           <div class="rectangle rectangle4"></div>
           <div class="text-block">
-              <h2><b>Contact</b></h2>
+              <h2>Contact</h2>
           </div>
       </div>
     
       <div class="flex-container">
         <!-- Image -->
         <div class="flex-item-right"> <!-- style="flex-grow: 2" -->
-          <p>I enjoy working with dedicated creatives from businesses that make the world beautiful. We can do so much together. Let’s talk. <br/> 
+          <p>I enjoy creating the world a better place, individualy or collectively. We can do so much together. Let’s talk. <br/> 
             <br/>
             If you want mail: milos@email.com <br/>
             <br/>
@@ -654,7 +680,8 @@ footer {
             <br/>
             If you want to be influenced: @milos <br/>
             <br/>
-            If you want to see me irl: I’ll be at R'dam Ice Cream. Buy me an &#127846;.  <br/> </p>
+            If you want to see me irl: I’ll be at R'dam&#127846;.
+          </p>
         </div>
 
         <!-- What I do -->
