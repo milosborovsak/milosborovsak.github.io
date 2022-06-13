@@ -286,6 +286,7 @@ span.lighter {
   max-width: 1000px; 
   margin: auto auto 60px auto;
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   line-height: 2.4;
   font-size: large;
@@ -423,6 +424,30 @@ p {
   line-height: 1.6;
 }
 
+.sounds-like-1 {
+  margin-left: 20px; 
+  margin-right: 20px; 
+  margin-bottom: 0px; 
+  margin-top: 70px;
+}
+
+@media (min-width: 600px) {
+  .sounds-like-1 {
+    margin-top: 0px;
+  }
+}
+
+.sounds-like-2 {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -20px;
+}
+
+.offer {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .whitebackground {
   background-color: white;
   padding-bottom: 20px;
@@ -436,7 +461,7 @@ footer {
 }
 </style>
 </head>
-<body>
+  <body>
 
     <!-- Navigation menu content -->
     <!-- https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp -->
@@ -492,21 +517,61 @@ footer {
                     <h2>Does this sound like <b>you</b>?</h2>
                 </div>
             </div>
-    
-            <div class="me">
-              <p>
-                <br/><br/>
-                You <b>want more</b>. <br/><br/> 
-                You don't <span class="yellow">find balance</span> in your life. <br/><br/> 
-                Your <b>perfectionism</b> limits your perfomance. <br/><br/> 
-                You want to <span class="yellow">set boundaries</span> in your relatioinships.<br/><br/>
-                You find yourself stuck in the <b>middle of transition</b>.<br/><br/>
-                You feel your <span class="yellow">past is influencing</span> how you live today.<br/><br/>
-                You feel that there is something more that you can <b>achieve</b> or <b>become</b>.<br/>
-              </p>
+
+            <div class="flex-container"><!-- class="flex-container"-->
+              <div class="flex-item-left"> <!-- class="flex-container"-->
+                  <div class="sounds-like-1">
+                    <p>
+                      You <b>want more</b>. <br/><br/> 
+                      You don't <span class="yellow">find balance</span> in your life. <br/><br/> 
+                      Your <b>perfectionism</b> limits your perfomance. <br/><br/> 
+                      You want to <span class="yellow">set boundaries</span> in your relatioinships.<br/><br/>
+                    </p>
+                  </div>
+              </div>
+      
+              <!-- What I do -->
+              <div class="flex-item-left"> <!-- class="flex-container"-->
+                  <div class="sounds-like-2">
+                    <p>
+                      You find yourself stuck in the <b>middle of transition</b>.<br/><br/>
+                      You feel your <span class="yellow">past is influencing</span> how you live today.<br/><br/>
+                      You feel that there is something more that you can <b>achieve</b> or <b>become</b>.<br/>
+                    </p>
+              </div>
+              </div>
             </div>
+          </div>
+
+    <!-- I can help you with -->
+    <div class="thisIsMe">
+      <div class="container">
+          <div class="rectangle rectangle2"></div>
+          <div class="text-block">
+              <h2>I can <b>help</b> you with</h2>
+          </div>
+      </div>
+      <div class="competences">
+          <span class="black">Life transitions</span>
+          <span class="white">Work-life balance</span>
+          <span class="gray">Anxiety</span>
+          <span class="black">Inner critic</span>            
+          <span class="white">Insecurity</span>
+          <span class="black">Perfectionism</span>
+          <span class="white">Trust issues</span>
+          <span class="gray">Frustrations</span>
+          <span class="black">Identity crisis</span>
+          <span class="white">Anger</span>
+          <span class="gray">Finding meaning, purpose, and values</span>
+          <span class="black">Boundaries</span>
+          <span class="white">Lack of directions</span>
+          <span class="gray">Depression</span>
+          <span class="black">Crisis of meaning</span>            
+          <span class="white">Awakening spirituality</span>
+          <span class="gray">Loneliness and aloneness</span>
         </div>
-    
+  </div>
+
     <!-- Offer -->
     <div class="thisIsMe whitebackground" id="thisisme">
         <div class="container">
@@ -518,7 +583,7 @@ footer {
 
         <div class="flex-container"><!-- class="flex-container"-->
             <div class="flex-item-left"> <!-- class="flex-container"-->
-                <div class="" style="margin-left: 20px; margin-right: 20px;">
+                <div class="offer">
                     <p style="margin-top: 0px;">a <b>safe, non-judgemental and confidential space</b> where you can be <b>seen and understood</b>. </h3>
                     <p>
                         I <span class=""><b>listen</b></span> to your words. I <b>listen</b> beneath the words. I <b>listen</b> to the silences and the pauses between your words.
@@ -534,51 +599,21 @@ footer {
     
             <!-- What I do -->
             <div class="flex-item-left"> <!-- class="flex-container"-->
-                <div class="" style="margin-left: 20px; margin-right: 20px;">
+                <div class="offer">
                     <h6 class="underline">Limited offer available</h6>
                     <p> As a psychosynthesis therapist in training and in supervision, I am currently offering <b>lower-cost therapy</b>. <br/>
                         It is traditional talk-therapy - think, "What do you wanto to talk about today?" 
                     </p>
-                    <p>I offer <b>30 minutes of free, preliminary chat</b> to answer any questions you may have and to discuss how I may be able to support you. It starts with a conversation. </p>
+                    <p>I offer <b>30 minutes of free, preliminary chat</b> to answer any questions you may have and to discuss how I may be able to support you. <span class="yellow">It starts with a conversation.</span>  </p>
                 </div>
                 <div class="button-container">
                     <a href="#contact" class="button button2">Start conversation</a>
                 </div>
-                <p style="margin-left: 20px; margin-right: 20px;">Not into this kind of engagment? <a href="">Try coaching!</a></p>
+                <p class="offer">Not into this kind of engagment? <a href="">Try coaching!</a></p>
             </div>
             </div>
         </div>
 
-    </div>
-
-    <!-- I can help you with -->
-    <div class="thisIsMe">
-        <div class="container">
-            <div class="rectangle rectangle2"></div>
-            <div class="text-block">
-                <h2>I can <b>help</b> you with</h2>
-            </div>
-        </div>
-        <div class="competences">
-            <span class="black">Crisis of meaning</span>            
-            <span class="white">Work-life balance</span>
-            <span class="gray">Anxiety</span>
-            <span class="black">Depression</span>            
-            <span class="white">Insecurity</span>
-            <span class="gray">Guilt and shame</span>
-            <span class="black">Perfectionism</span>
-            <span class="white">Trust issues</span>
-            <span class="gray">Boundaries</span>
-            <span class="black">Identity crisis</span>
-            <span class="white">Lack of directions</span>
-            <span class="gray">Loneliness and aloneness</span>
-            <span class="black">Frustrations</span>
-            <span class="white">Awakening spirituality</span>
-            <span class="gray">Finding meaning, purpose, and values</span>
-            <span class="black">Life transitions</span>
-            <span class="white">Anger</span>
-            <span class="gray">Inner critic</span>
-          </div>
     </div>
 
     <div class="flex-container">
@@ -596,12 +631,12 @@ footer {
 
           <div class="thisIsMe" >
             <!-- https://www.counselling-directory.org.uk/psychosynthesis.html#theoriesofpsychosynthesis -->
-            <h3 style="margin-left: 20px; margin-right: 20px;">How psychosynthesis works?</h3>
-            <p style="margin-left: 20px; margin-right: 20px;">A key assumption of psychosynthesis is that <b>every human being has a vast potential for personal growth</b> - a natural tendency to synthesize all aspects
+            <h3 class="offer">How psychosynthesis works?</h3>
+            <p class="offer">A key assumption of psychosynthesis is that <b>every human being has a vast potential for personal growth</b> - a natural tendency to synthesize all aspects
               of their being to become the fullest realization of themselves. Psychosynthesis is a conscious attempt to cooperate with this natural process of personal
               development to foster awareness, self-healing, and a greater connection to the ever-changing nature of human life.
             </p>
-            <p style="margin-left: 20px; margin-right: 20px;">
+            <p class="offer">
                  The therapeutic framework of psychosynthesis can help a wide range of individuals to overcome life challenges. Therapists in psychosynthesis 
                  counseling work to establish a specific relationship with their clients and will draw on a range of diverse techniques to guide them through
                   the process of <b> self-actualization and self-realisation</b>. 
