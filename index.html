@@ -93,6 +93,20 @@ body, html {
   background-color: yellow;
 }
 
+.button4 {
+  background-color: yellow; 
+  padding: 25px 25px;
+  color: black; 
+  border: 1px solid black;
+  margin: 50px 20px;
+  width: 70%;
+  box-shadow: 6px 6px black;
+  font-size: 18px;
+}
+
+.button4:hover {
+  box-shadow: 10px 10px black;
+}
 
 .img {
   position: absolute;
@@ -179,7 +193,7 @@ body, html {
 }
 
 .iAm {
-    margin: 0px 10px;
+    margin: 20px 10px 0px;
 }
 
 h2 {
@@ -380,6 +394,10 @@ span.lighter {
         justify-content: space-around;
     }
 
+    .button4 {
+        width: 400px;
+    }
+
 }
 
 @media (min-width: 2000px) {
@@ -507,8 +525,8 @@ footer {
 </style>
 </head>
   <body>
-
-    <!-- Navigation menu content -->
+<!--
+     Navigation menu content
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="overlay-content">
@@ -519,7 +537,7 @@ footer {
       </div>
     </div>
 
-    <!-- Top Navigation Menu -->
+     Top Navigation Menu 
     <div class="topnav">
         <a>
             <div class="navplaceholder"></div>
@@ -528,13 +546,11 @@ footer {
             <i class="fa fa-bars"></i>
         </a>
     </div>
-
+  -->
   <div class="page">
     <div class="iAm" id="home">
         <h3 style="font-size: 26px;">I'm Miloš Borovšak.</h3>
         <h5 style="font-size: 15px;">A <span class="yellow">psychosynthesis therapist</span> in training.</h5> <!--and  <span class="yellow">development coach</span>.  -->
-        <br/>
-        <br/>
       </div> 
     <div class="flex-container">
         <!-- Image -->
@@ -546,6 +562,9 @@ footer {
         <div class="flex-item-right">
           <div class="callToAction"> 
             <h1>Supporting <span class="lighter">and</span> guiding you <span class="lighter">to</span> make a change.<br/>The <span class="yellow">psychological</span> way. </h1>
+          </div>
+          <div class="button-container">
+            <a href="https://calendly.com/milosborovsak/initial-free-session" class="button button4">Free <b>How to make a change</b> session </a>
           </div>
         </div>
     </div>
@@ -577,11 +596,14 @@ footer {
                   <div class="sounds-like-2">
                     <p>
                       You find yourself stuck in the <b>middle of transition</b>.<br/><br/>
-                      You feel your <span class="yellow">past is influencing</span> how you live today.<br/><br/>
+                      You feel your <span class="yellow">past is dragging you down</span>?<br/><br/>
                       You feel that there is something more that you can <b>achieve</b> or <b>become</b>.<br/>
                     </p>
+                  </div>
               </div>
-              </div>
+            </div>
+            <div class="button-container">
+              <a href="https://calendly.com/milosborovsak/initial-free-session" class="button button4">Free <b>How to make a change</b> session </a>
             </div>
           </div>
 
@@ -648,11 +670,11 @@ footer {
                     </p>
                     <p>I offer <b>30 minutes of free, preliminary chat</b> to answer any questions you may have and to discuss how I may be able to support you. <span class="yellow">It starts with a conversation.</span>  </p>
                 </div>
-                <div class="button-container">
-                    <a href="#contact" class="button button2">Start a conversation</a>
-                </div>
                 <!-- <p class="offer">Not into this kind of engagment? <a href="">Try coaching!</a></p> -->
             </div>
+            </div>
+            <div class="button-container">
+              <a href="https://calendly.com/milosborovsak/initial-free-session" class="button button4">Free <b>How to make a change</b> session </a>
             </div>
         </div>
 
@@ -701,14 +723,14 @@ footer {
             My name is <b>Miloš</b> [pronounced 'meelosh'], I am a <b>Psychosynthesis Therapist</b> in training (under supervision) at The Institute of Psychosynthesis London in affiliation with Middlesex University London. <!-- I am UKCP (UK Council for Psychotherapy) registered. -->
           </p>
           <p>
-            My original career was as a Research Scientist in Physics and later on as a developer in a technological start-up. I increasingly found that I want to help people personally than trying to improve code or mathematical models so I started a psychotherapeutic path. 
+            My original career was as a Research Scientist in Physics and later on as a developer in a technological start-up. I increasingly found that I want to help people personally rather than trying to improve code or mathematical models so I started a psychotherapeutic path. 
           </p>
           <p>  
             I found this passion while being involved in Leadership Training and Train the Trainer programs in the National Scout Organisation of Slovenia.
           </p>
 
           <p>
-            In my free time I love being in <a href="nature.html"><b>nature</b></a> and observing its shapes and forms, I am reading at least <b>52 books a year</b> and I am training my dog to <b>become a rescue dog</b>. 
+            In my free time I love being in <a href="nature.html"><b>nature</b></a> and observing its shapes and forms, I read at least <b>52 books a year</b> and I am training my dog to <b>become a rescue dog</b>. 
           </p>
           <h3 class="no-margin">What sets me apart?</h3>
           <p>
@@ -749,9 +771,29 @@ footer {
               </div>
             </div>
           </div>
-    
+
+        <div class="thisIsMe whitebackground" id="thisisme">
+          <div class="container">
+              <div class="rectangle rectangle4"></div>
+              <div class="text-block">
+                  <h2>You don't have to face any of this alone.</b></h2>
+              </div>
+          </div>
+  
+          <div class="me">
+            <p> <i>Psychosynthesis is a method of psychological development and self realization for those who refuse to remain the slave of their own inner 
+              phantasms or of external influences, who refuse to submit passively to the play of psychological forces which is going on within them, and 
+              who are determined to become the master of their own lives.</i></p>
+              <p style="text-align: right;">Roberto Assagioli</p>
+          </div>
+          <div class="button-container">
+            <a href="https://calendly.com/milosborovsak/initial-free-session" class="button button4">Free <b>How to make a change</b> session </a>
+          </div>
+      </div>
+
+
       <div class="container" id="contact">
-          <div class="rectangle rectangle4"></div>
+          <div class="rectangle rectangle1"></div>
           <div class="text-block">
               <h2>Contact</h2>
           </div>
